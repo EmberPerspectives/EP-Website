@@ -31,7 +31,7 @@
     text-align: center;
     padding: 8px 0 24px;
     border-bottom: 2px solid #1a1a1a;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   .logo {
@@ -83,13 +83,80 @@
     color: #1a1a1a;
   }
 
-  /* ---- Operating principle: black box + white statement box ---- */
+  .hero-statement {
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ---- Hero ---- */
+
+  .hero p:last-of-type { margin-bottom: 22px; }
+
+  .hero-tagline {
+    text-align: center;
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  .hero-tagline .bold-part {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .hero-tagline .script-part {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: #1a1a1a;
+  }
+
+  .tagline-box {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 20px 0 8px;
+    text-align: center;
+  }
+
+  .tagline-box .bold-part {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 17px;
+  }
+
+  .tagline-box .script-part {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: #fff;
+    font-size: 17px;
+  }
+
+  .fire-echo-line {
+    font-size: 16px;
+  }
+
+  .fire-echo-line .bold-part {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .fire-echo-line .script-part {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: #1a1a1a;
+  }
+
+  /* ---- Standalone statement box (reused for the retained line) ---- */
 
   .core-principle {
     background: #1a1a1a;
     border-radius: 8px;
-    padding: 28px 32px;
-    margin: 20px 0 16px;
+    padding: 26px 30px;
+    margin: 20px 0 8px;
+    text-align: center;
   }
 
   .core-principle p {
@@ -97,38 +164,11 @@
     font-style: italic;
     font-size: 17px;
     color: #fff;
-    margin: 0 0 14px;
-    line-height: 1.65;
-  }
-
-  .core-principle p:last-child { margin-bottom: 0; }
-
-  .core-principle-sub {
-    font-size: 14px !important;
-    font-style: normal !important;
-    color: #cfcfcf !important;
-    line-height: 1.7 !important;
-  }
-
-  .bring-statement {
-    background: #fff;
-    border: 2px solid #1a1a1a;
-    border-radius: 6px;
-    padding: 20px 24px;
-    margin: 0 0 32px;
-    text-align: center;
-  }
-
-  .bring-statement p {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: #1a1a1a;
     margin: 0;
-    letter-spacing: 0.02em;
+    line-height: 1.6;
   }
 
-  /* ---- Five tools, no icons ---- */
+  /* ---- Five tools ---- */
 
   .tools-grid {
     display: grid;
@@ -207,7 +247,7 @@
   }
 
   .layer-block {
-    border: 1px solid #ddd;
+    border: 1px solid #b0b0b0;
     border-radius: 8px;
     padding: 20px 22px;
     background: #fff;
@@ -227,7 +267,7 @@
     margin: 0;
   }
 
-  /* ---- Compassionate reframe ---- */
+  /* ---- New Perspective. New Language. ---- */
 
   .reframe-intro {
     font-size: 14px;
@@ -239,7 +279,7 @@
     display: flex;
     gap: 14px;
     align-items: flex-start;
-    padding: 14px 18px;
+    padding: 15px 18px;
     margin-bottom: 10px;
     border-left: 3px solid;
     border-radius: 0 6px 6px 0;
@@ -252,89 +292,11 @@
   .reframe.tool-mug { border-color: #2A6FA8; }
   .reframe.tool-wood { border-color: #2E7D4F; }
 
-  .reframe-from { font-size: 13px; color: #999; font-style: italic; flex: 1; padding-top: 1px; }
-  .reframe-arrow { color: #1a1a1a; font-size: 16px; flex-shrink: 0; padding-top: 1px; }
-  .reframe-to { font-size: 13px; color: #2a2a2a; flex: 2; line-height: 1.5; }
+  .reframe-from { font-size: 12px; color: #999; font-style: italic; flex: 1; padding-top: 2px; }
+  .reframe-arrow { color: #ccc; font-size: 16px; flex-shrink: 0; padding-top: 1px; }
+  .reframe-to { font-size: 15px; font-weight: 600; color: #1a1a1a; flex: 2; line-height: 1.5; }
 
-  /* ---- Campfire cycle, no icons, ember as line-break ---- */
-
-  .cycle-intro {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 6px;
-  }
-
-  .cycle-steps {
-    position: relative;
-    margin: 24px 0;
-    padding-left: 26px;
-  }
-
-  .cycle-steps::before {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 6px;
-    bottom: 6px;
-    width: 2px;
-    background: #e5e5e5;
-  }
-
-  .cycle-step {
-    position: relative;
-    padding: 0 0 28px 0;
-  }
-
-  .cycle-step:last-child { padding-bottom: 0; }
-
-  .cycle-head {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-left: -26px;
-    margin-bottom: 6px;
-  }
-
-  .cycle-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    flex-shrink: 0;
-  }
-
-  .cycle-step.flashlight .cycle-dot { background: #E8A020; }
-  .cycle-step.lighter .cycle-dot { background: #C8382A; }
-  .cycle-step.mug .cycle-dot { background: #2A6FA8; }
-  .cycle-step.wood .cycle-dot { background: #2E7D4F; }
-
-  .cycle-step.ember .cycle-dot {
-    background: #6B3FA0;
-  }
-
-  .cycle-label {
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  .cycle-step.flashlight .cycle-label { color: #B7770D; }
-  .cycle-step.lighter .cycle-label { color: #C0392B; }
-  .cycle-step.mug .cycle-label { color: #1A5276; }
-  .cycle-step.wood .cycle-label { color: #276B2F; }
-
-  .cycle-step.ember .cycle-label {
-    color: #5B2C8D;
-  }
-
-  .cycle-content p {
-    font-size: 14px;
-    margin: 0;
-    color: #333;
-    line-height: 1.6;
-  }
-
-  /* ---- Standard line, now black ---- */
+  /* ---- Standard line, black ---- */
 
   .standard-line {
     background: #1a1a1a;
@@ -365,37 +327,94 @@
   .research-box p { font-size: 14px; margin-bottom: 10px; }
   .research-box p:last-child { margin-bottom: 0; }
 
-  .not-list {
-    padding-left: 0;
-    list-style: none;
-    margin: 12px 0;
+  /* ---- See Your Campfire ---- */
+
+  .tool-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 18px;
   }
 
-  .not-list li {
+  .tool-dots span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .tool-dots .d1 { background: #E8A020; }
+  .tool-dots .d2 { background: #C8382A; }
+  .tool-dots .d3 { background: #6B3FA0; }
+  .tool-dots .d4 { background: #2A6FA8; }
+  .tool-dots .d5 { background: #2E7D4F; }
+
+  .campfire-questions {
+    margin: 18px 0;
+  }
+
+  .campfire-questions .question-line {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .cta-box {
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 26px 28px;
+    margin: 24px 0 8px;
+    text-align: center;
+  }
+
+  .cta-box p {
     font-size: 14px;
-    color: #444;
-    padding: 8px 0 8px 20px;
-    border-bottom: 1px solid #f5f5f5;
-    position: relative;
-    line-height: 1.5;
+    color: #333;
+    margin: 0 0 20px;
   }
 
-  .not-list li:last-child { border-bottom: none; }
+  .cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-  .not-list li::before {
-    content: '×';
-    position: absolute;
-    left: 0;
-    color: #ccc;
-    font-weight: 700;
-    font-size: 16px;
+  .cta-button {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1a1a1a;
+    background: #fff;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .cta-button:hover {
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  .cta-button.primary {
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  .cta-button.primary:hover {
+    background: #fff;
+    color: #1a1a1a;
   }
 
   .closing-box {
     background: #1a1a1a;
     border-radius: 8px;
     padding: 28px 32px;
-    margin: 32px 0;
+    margin: 32px 0 24px;
   }
 
   .closing-box p {
@@ -408,10 +427,28 @@
     text-align: center;
   }
 
+  .closing-tagline {
+    text-align: center;
+    margin: 0 0 16px;
+    font-size: 17px;
+  }
+
+  .closing-tagline .bold-part {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .closing-tagline .script-part {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: #1a1a1a;
+  }
+
   /* ---- Footer colophon ---- */
 
   .site-footer {
-    margin-top: 56px;
+    margin-top: 40px;
     padding-top: 28px;
     border-top: 1px solid #eee;
     text-align: center;
@@ -473,7 +510,9 @@
   @media (max-width: 480px) {
     .reframe { flex-direction: column; gap: 2px; }
     .reframe-arrow { display: none; }
-    .reframe-to::before { content: "→ "; }
+    .reframe-to::before { content: "→ "; color: #1a1a1a; }
+    .cta-buttons { flex-direction: column; }
+    .cta-button { text-align: center; }
   }
 </style>
 </head>
@@ -484,17 +523,35 @@
   <div class="contact-line">Questions or want to learn more? <a href="mailto:aloha@emberperspectives.com">aloha@emberperspectives.com</a></div>
 </div>
 
-<h2>What Ember Perspectives Is</h2>
-<p>A symbolic framework that helps people understand what they naturally bring to shared human experiences.</p>
-<p class="question-line">Why does the same fire feel completely different depending on who and what's around it?</p>
-
-<div class="bring-statement">
-  <p>What We All Bring to the Fire</p>
+<div class="hero">
+  <p>Have you ever been in the same situation as someone else and somehow walked away with a completely different experience of it? You were at the same event, with the same group, on the same night. So why did it feel so different?</p>
+  <p>Maybe nothing went wrong. Maybe no one was being difficult. But maybe you are simply different people who show up differently. You notice different things. You need different things. What feels obvious to you might not have even registered for the person sitting right beside you.</p>
+  <p class="hero-statement">Ember Perspectives started by asking: What makes people experience the same situation so differently?</p>
 </div>
 
+<div class="tagline-box">
+  <span class="bold-part">Same Campfire.</span> <span class="script-part">Different Experiences.</span>
+</div>
+
+<h2>Why a Campfire?</h2>
+
+<p>It started with two camping trips. One with family and another with friends.</p>
+<p>As I started planning, I began noticing how differently everyone approached the same things. People had their own ways of prepping and preparing. Activities that would recharge some people would completely drain others. Some wanted structure and a plan, while others were perfectly happy to see what happened. Some needed quiet time to feel restored. Others felt most energized with the group around them.</p>
+<p>But at the end of every night, no matter how differently the day had unfolded, everyone ended up around the same campfire.</p>
+<p class="fire-echo-line"><span class="bold-part">The fire was the same.</span> <span class="script-part">The experiences around it were not.</span></p>
+<p>That observation stayed with me. I started seeing the same pattern beyond those camping trips: in relationships, at work, and in everyday life.</p>
+<p>I've always been curious about other people's perspectives and how differently people can experience the same situation. My background in Industrial-Organizational Psychology gave me a research lens for exploring those differences. Rather than creating my own explanation for them, I wanted to build from something already grounded in personality research.</p>
+<p>What began as curiosity about people I love eventually became Ember Perspectives.</p>
+
+<h2>What Ember Perspectives Became</h2>
+
+<p>A symbolic framework for understanding what we naturally bring to shared experiences.</p>
+<p>Ember Perspectives uses the metaphor of a campfire to explore how people show up differently in the spaces they share. Each person carries five symbolic tools, each representing one of the five broad dimensions of personality in the Big Five model.</p>
+<p>These tools aren't types. They're not boxes. They're not fixed roles.</p>
+<p><strong>Everyone carries all five.</strong></p>
+
 <div class="core-principle no-break">
-  <p>We each bring five items. They simply show up in different ways, at different times, in different conditions.</p>
-  <p class="core-principle-sub">It is one person, not five separate people. Everyone carries all five dimensions. No one IS the flashlight. Everyone HAS a flashlight. It just shines differently and runs on different batteries.</p>
+  <p>You are not the flashlight. You have a flashlight. So does everyone else.</p>
 </div>
 
 <h2>The Five Tools</h2>
@@ -506,7 +563,7 @@
       <div class="tool-dimension">Conscientiousness | Guidance</div>
     </div>
     <div class="tool-phrase">"Helping light the way."</div>
-    <div class="tool-description">Preparation, structure, reliability, follow-through. Lights the path so the group can move forward safely.</div>
+    <div class="tool-description">Preparation, structure, reliability, follow-through. Helps light the path and keeps things moving forward.</div>
   </div>
   <div class="tool-row lighter no-break">
     <div>
@@ -522,7 +579,7 @@
       <div class="tool-dimension">Emotional Sensitivity | Awareness</div>
     </div>
     <div class="tool-phrase">"Feeling this deeply."</div>
-    <div class="tool-description">Emotional depth, sensitivity, awareness beneath the surface. Notices what others miss before anyone else names it.</div>
+    <div class="tool-description">Emotional depth, sensitivity, awareness beneath the surface. Some things just hit stronger.</div>
   </div>
   <div class="tool-row mug no-break">
     <div>
@@ -542,130 +599,99 @@
   </div>
 </div>
 
-<h2>The Full Picture</h2>
-<p class="layers-subhead">Three layers that shape the fire.</p>
+<h2>What Shapes the Fire?</h2>
+
+<p>Knowing which tools we all carry is only the beginning.</p>
+<p>Our tools have parts and natural ranges, but they don't show up exactly the same way all the time. Current capacity matters. The environment matters. Who else is around the fire matters. Ember Perspectives looks at three layers together to understand the bigger picture.</p>
 
 <div class="layers-grid">
   <div class="layer-block no-break">
     <div class="layer-title">Layer 1: The Five Tools</div>
-    <p>What everyone brings. The Big Five, every person, every fire.</p>
+    <p>What everyone brings. Each tool is made up of individual parts, each with its own spectrum and natural range.</p>
   </div>
   <div class="layer-block no-break">
     <div class="layer-title">Layer 2: Tool Conditions</div>
-    <p>The same tool performs differently depending on its current state. Full batteries or running low changes everything.</p>
+    <p>The same tool performs differently depending on its current state. Full batteries or drained batteries can change everything.</p>
   </div>
   <div class="layer-block no-break">
-    <div class="layer-title">Layer 3: The Environment</div>
+    <div class="layer-title">Layer 3: The Fire Pit</div>
     <p>The context around the fire that shapes which contributions feel welcomed, safe, or possible.</p>
   </div>
 </div>
 
-<h2>Compassionate Reframing Language</h2>
-<p class="reframe-intro">One of the most immediately usable things the framework offers. The same dimension expressed in clinical language versus campfire language lands completely differently.</p>
+<h2>New Perspective. New Language.</h2>
+<p class="reframe-intro">When we can see more of what may be shaping someone's experience, we have more ways to understand it.</p>
+<p class="reframe-intro">Instead of jumping straight to negative labels, we can get curious about where their tools might be different from our own.</p>
+<p class="reframe-intro">A new perspective can give us new language.</p>
 
 <div class="reframe tool-flashlight">
-  <div class="reframe-from">"You're controlling"</div>
+  <div class="reframe-from">"You're controlling."</div>
   <div class="reframe-arrow">→</div>
-  <div class="reframe-to">your flashlight is blinding right now</div>
+  <div class="reframe-to">Your beam is brighter than mine right now.</div>
 </div>
 <div class="reframe tool-lighter">
-  <div class="reframe-from">"You're introverted" / "you're antisocial"</div>
+  <div class="reframe-from">"You're too much."</div>
   <div class="reframe-arrow">→</div>
-  <div class="reframe-to">you like a more intimate fire to gather around</div>
+  <div class="reframe-to">Your lighter's flame is bigger than mine.</div>
 </div>
 <div class="reframe tool-ember">
-  <div class="reframe-from">"You're neurotic"</div>
+  <div class="reframe-from">"You're overreacting."</div>
   <div class="reframe-arrow">→</div>
-  <div class="reframe-to">the wind hit your ember before it reached anyone else's</div>
+  <div class="reframe-to">The wind hit your inner ember before it reached mine.</div>
 </div>
 <div class="reframe tool-mug">
-  <div class="reframe-from">"You're too much"</div>
+  <div class="reframe-from">"You're selfish."</div>
   <div class="reframe-arrow">→</div>
-  <div class="reframe-to">you're pouring into mugs that never asked to be filled</div>
+  <div class="reframe-to">Your mug is cooler than mine.</div>
 </div>
 <div class="reframe tool-wood">
-  <div class="reframe-from">"You're reckless"</div>
+  <div class="reframe-from">"You're boring."</div>
   <div class="reframe-arrow">→</div>
-  <div class="reframe-to">your wood's throwing sparks outside the pit</div>
+  <div class="reframe-to">You gather your wood closer to camp than I do.</div>
 </div>
 
-<h2>The Campfire Cycle</h2>
-<p class="cycle-intro">The five tools aren't a list. They're a cycle with a story. And the inner ember isn't a point in the sequence. It's the constant at the center.</p>
+<h2>The Research Foundation</h2>
 
-<div class="cycle-steps">
-
-  <div class="cycle-step flashlight">
-    <div class="cycle-head">
-      <div class="cycle-dot"></div>
-      <div class="cycle-label">Before anyone arrives</div>
-    </div>
-    <div class="cycle-content">
-      <p>Planning the trip. Lighting the path. And somewhere in that preparation, there's already a piece of wood, an idea, a vision of what this fire could be. Wood comes first as possibility, before it comes as fuel.</p>
-    </div>
-  </div>
-  <div class="cycle-step lighter">
-    <div class="cycle-head">
-      <div class="cycle-dot"></div>
-      <div class="cycle-label">The fire starts</div>
-    </div>
-    <div class="cycle-content">
-      <p>The lighter ignites it. When alone, the lighter can be the smoke signal, the thing that calls others toward the fire before they even knew they were looking for warmth.</p>
-    </div>
-  </div>
-  <div class="cycle-step ember">
-    <div class="cycle-head">
-      <div class="cycle-dot"></div>
-      <div class="cycle-label">The center, always</div>
-    </div>
-    <div class="cycle-content">
-      <p>Not a point in the sequence. The constant underneath the story. Present at every stage. It was there before the flashlight turned on. It will be there after everyone leaves. It never stops.</p>
-    </div>
-  </div>
-  <div class="cycle-step mug">
-    <div class="cycle-head">
-      <div class="cycle-dot"></div>
-      <div class="cycle-label">The fire is going, warmth gets shared</div>
-    </div>
-    <div class="cycle-content">
-      <p>You can drink from your own mug alone. But it means more when someone else is holding one too.</p>
-    </div>
-  </div>
-  <div class="cycle-step wood">
-    <div class="cycle-head">
-      <div class="cycle-dot"></div>
-      <div class="cycle-label">To keep the fire going, and start the loop over</div>
-    </div>
-    <div class="cycle-content">
-      <p>Wood appears twice: once at the beginning as possibility, once here as continuation. Beginning and end. The thing that makes the fire worth starting AND the thing that keeps it worth staying at.</p>
-    </div>
-  </div>
+<div class="research-box">
+  <p>Ember Perspectives is grounded in the Big Five model of personality, one of the most extensively studied frameworks in personality psychology.</p>
+  <p>Decades of research across different populations and cultures have found support for these broad dimensions of personality. Unlike personality systems that sort people into fixed types, the Big Five measures traits along continuous dimensions, recognizing that people fall somewhere along a spectrum rather than into one category or another.</p>
+  <p>The Big Five describes five broad dimensions: Conscientiousness, Extraversion, Neuroticism, Agreeableness, and Openness to Experience.</p>
+  <p><strong>Ember Perspectives doesn't replace that research. It translates it.</strong></p>
+  <p>The five tools bring those dimensions into everyday life, giving us a more familiar way to recognize and talk about the differences between us. They also give us language for the full spectrum, making it easier to see how different ways of showing up can change the fire without treating one end as the "right" one.</p>
+  <p><strong>The research provides the foundation. The campfire gives us a way to visualize and understand it.</strong></p>
 </div>
 
 <div class="standard-line">
   <p>Grounded in real research, translated for real life.</p>
 </div>
 
-<h2>The Research Foundation</h2>
+<h2>Your Unique Fire</h2>
 
-<div class="research-box">
-  <p>Built on the Big Five (OCEAN), one of the most rigorously validated personality models in psychological research. Unlike older typing systems that sort people into fixed categories, the Big Five is continuously validated, cross-culturally replicated, and dimensional rather than categorical, meaning people exist on a spectrum, not a box.</p>
-  <p>The framework's design challenge: taking something rigorously validated and making it emotionally intuitive, conversationally usable, and humanly recognizable, without losing the integrity of the underlying model. That's what the campfire metaphor accomplishes. The symbols aren't decorative. They are carefully chosen to map onto what the research actually shows about each dimension.</p>
+<div class="tool-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span></div>
+
+<p>Your five tools come together in a combination that is uniquely yours.</p>
+<p>Your Campfire Profile takes your Big Five results and translates them through the Ember Perspectives framework. It looks beyond five overall scores to the individual parts that give your tools their particular shape.</p>
+<p>And when more than one person takes the assessment, another picture begins to emerge.</p>
+
+<div class="campfire-questions">
+  <span class="question-line">Where are your tools similar?</span>
+  <span class="question-line">Where are they different?</span>
+  <span class="question-line">What might one person notice that another doesn't?</span>
+  <span class="question-line">Where might the same situation create a completely different experience?</span>
 </div>
 
-<h2>What Ember Perspectives Is Not</h2>
+<p>One person. A couple. A team. A whole group around the fire.</p>
 
-<ul class="not-list">
-  <li>A personality typing system, never "you are the mug."</li>
-  <li>A clinical or diagnostic tool</li>
-  <li>Myers-Briggs or anything like it: not trend-driven, not binary, not scientifically weak</li>
-  <li>Pseudoscience dressed up with warm language</li>
-  <li>Corporate jargon dressed up with campfire imagery</li>
-  <li>Generic self-help content or outdoor/rustic lifestyle branding (the campfire is symbolic)</li>
-  <li>Static categories: the framework is dynamic, contextual, and relational</li>
-</ul>
+<div class="cta-box no-break">
+  <p>Want your own Campfire Profile? Take the free Big Five assessment at BigFive-Test.com. When you finish, save your results code and email it to me at aloha@emberperspectives.com. I'll use your results to create your Campfire Profile.</p>
+  <div class="cta-buttons">
+    <a href="https://bigfive-test.com/" target="_blank" rel="noopener noreferrer" class="cta-button primary">Take the Big Five Test</a>
+    <a href="mailto:aloha@emberperspectives.com" class="cta-button">Email Your Results Code</a>
+  </div>
+</div>
 
 <div class="closing-box">
-  <p>What we all bring to the fire. All different. All valuable. All around the same campfire.</p>
+  <p>What we all bring to the fire. All different. All valuable.<br>All around the same fire.</p>
 </div>
 
 <footer class="site-footer">
