@@ -296,6 +296,23 @@
   .reframe-arrow { color: #ccc; font-size: 16px; flex-shrink: 0; padding-top: 1px; }
   .reframe-to { font-size: 15px; font-weight: 600; color: #1a1a1a; flex: 2; line-height: 1.5; }
 
+  .expand-toggle {
+    display: block;
+    margin: 4px 0 24px;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 4px 0;
+  }
+
+  .expand-toggle:hover { color: #666; }
+
   /* ---- Standard line, black ---- */
 
   .standard-line {
@@ -539,9 +556,14 @@
 <p>As I started planning, I began noticing how differently everyone approached the same things. People had their own ways of prepping and preparing. Activities that would recharge some people would completely drain others. Some wanted structure and a plan, while others were perfectly happy to see what happened. Some needed quiet time to feel restored. Others felt most energized with the group around them.</p>
 <p>But at the end of every night, no matter how differently the day had unfolded, everyone ended up around the same campfire.</p>
 <p class="fire-echo-line"><span class="bold-part">The fire was the same.</span> <span class="script-part">The experiences around it were not.</span></p>
-<p>That observation stayed with me. I started seeing the same pattern beyond those camping trips: in relationships, at work, and in everyday life.</p>
-<p>I've always been curious about other people's perspectives. How can the same moment, interaction, or thing register so differently from one person to another? My background in Industrial-Organizational Psychology gave me a research lens for exploring that question. Rather than creating my own answer, I wanted to build from something already grounded in personality research.</p>
-<p>What began as curiosity about people I love eventually became Ember Perspectives.</p>
+
+<div id="campfire-hidden">
+  <p>That observation stayed with me. I started seeing the same pattern beyond those camping trips: in relationships, at work, and in everyday life.</p>
+  <p>I've always been curious about other people's perspectives. How can the same moment, interaction, or thing register so differently from one person to another? My background in Industrial-Organizational Psychology gave me a research lens for exploring that question. Rather than creating my own answer, I wanted to build from something already grounded in personality research.</p>
+  <p>What began as curiosity about people I love eventually became Ember Perspectives.</p>
+</div>
+
+<button class="expand-toggle" id="campfire-toggle">Read the rest of the story</button>
 
 <h2>What Ember Perspectives Became</h2>
 
@@ -654,11 +676,16 @@
 
 <div class="research-box">
   <p>Ember Perspectives is grounded in the Big Five model of personality, one of the most extensively studied frameworks in personality psychology.</p>
-  <p>Decades of research across different populations and cultures have found support for these broad dimensions of personality. Unlike personality systems that sort people into fixed types, the Big Five measures traits along continuous dimensions, recognizing that people fall somewhere along a spectrum rather than into one category or another.</p>
-  <p>The Big Five describes five broad dimensions: Conscientiousness, Extraversion, Neuroticism, Agreeableness, and Openness to Experience.</p>
-  <p><strong>Ember Perspectives doesn't replace that research. It translates it.</strong></p>
-  <p>The five tools bring those dimensions into everyday life, giving us a more familiar way to recognize and talk about the differences between us. They also give us language for the full spectrum, making it easier to see how different ways of showing up can change the fire without treating one end as the "right" one.</p>
-  <p><strong>The research provides the foundation. The campfire gives us a way to visualize and understand it.</strong></p>
+
+  <div id="research-hidden">
+    <p>Decades of research across different populations and cultures have found support for these broad dimensions of personality. Unlike personality systems that sort people into fixed types, the Big Five measures traits along continuous dimensions, recognizing that people fall somewhere along a spectrum rather than into one category or another.</p>
+    <p>The Big Five describes five broad dimensions: Conscientiousness, Extraversion, Neuroticism, Agreeableness, and Openness to Experience.</p>
+    <p><strong>Ember Perspectives doesn't replace that research. It translates it.</strong></p>
+    <p>The five tools bring those dimensions into everyday life, giving us a more familiar way to recognize and talk about the differences between us. They also give us language for the full spectrum, making it easier to see how different ways of showing up can change the fire without treating one end as the "right" one.</p>
+    <p><strong>The research provides the foundation. The campfire gives us a way to visualize and understand it.</strong></p>
+  </div>
+
+  <button class="expand-toggle" id="research-toggle">Read the full research foundation</button>
 </div>
 
 <div class="standard-line">
@@ -701,6 +728,31 @@
   <div class="footer-email"><a href="mailto:aloha@emberperspectives.com">aloha@emberperspectives.com</a></div>
   <p class="footer-fine">More coming soon</p>
 </footer>
+
+<script>
+  function initExpandable(hiddenId, btnId, showText, hideText) {
+    var hidden = document.getElementById(hiddenId);
+    var btn = document.getElementById(btnId);
+    if (!hidden || !btn) return;
+
+    function setState(collapsed) {
+      hidden.style.display = collapsed ? 'none' : 'block';
+      btn.textContent = collapsed ? showText : hideText;
+    }
+
+    setState(window.innerWidth < 700);
+
+    btn.addEventListener('click', function() {
+      var isCollapsed = hidden.style.display === 'none';
+      setState(!isCollapsed);
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    initExpandable('campfire-hidden', 'campfire-toggle', 'Read the rest of the story', 'Show less');
+    initExpandable('research-hidden', 'research-toggle', 'Read the full research foundation', 'Show less');
+  });
+</script>
 
 </body>
 </html>
